@@ -12,8 +12,8 @@ type config struct {
 
 func (c *config) parse() error {
 	const (
-		portEnvVarName = "PROXY_PORT"
-		logsEnvVarName = "PROXY_LOGS"
+		portEnvVarName = "PORT"
+		logsEnvVarName = "LOGS"
 		portDefault    = 80
 	)
 
