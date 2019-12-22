@@ -20,6 +20,9 @@ func main() {
 		log.Fatal("listen starting", err)
 	}
 	defer listener.Close()
+	if c.Logs {
+		log.Print("listening started on port: ", c.Port)
+	}
 
 	for {
 		newConnection, err := listener.Accept()
