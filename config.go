@@ -23,10 +23,9 @@ func (c *config) parse() error {
 		if c.Port, err = strconv.ParseInt(envPort, 10, 64); err != nil {
 			return err
 		}
-
-		return nil
+	} else {
+		c.Port = portDefault
 	}
-	c.Port = portDefault
 
 	envLogs := os.Getenv(logsEnvVarName)
 	if envLogs != "" {
